@@ -28,12 +28,11 @@ public class Error {
         });
     }
 
-    public void exec() throws IOException {
-
-        for (int i = 0; i < 10; i++) {
+    public void exec() throws IOException { 
+        for (int i = 0; i < 3; i++) {
             File test = File.createTempFile("test", ".docx");
             stamper.stamp(this.getClass().getClassLoader().getResourceAsStream("error.docx"), new Big(), new FileOutputStream(test));
-            System.out.println("test = " + test);
+            System.out.println((i == 0 ? "Correct file: " : "Corrupted file: ") + test);
         }
     }
 
