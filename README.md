@@ -1,0 +1,1 @@
+# docx-stamper-error-minimal
